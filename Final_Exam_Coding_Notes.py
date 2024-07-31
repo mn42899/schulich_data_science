@@ -302,18 +302,11 @@ for column in categorical:
 
 
 
-
-
-
 #MACHINE LEARNING MODELS TO IMPLEMENT
-
-
 ## If Predictions are too perfect for individual scores use (Example" LogisticRegression(class_weight='balanced') "
 
 
-
 #Logistic Regression SETUP
-
 logreg = Pipeline(steps = [('preprocessor', preprocessor), ('logistic', LogisticRegression())])
 
 # fit model
@@ -339,11 +332,7 @@ print("Cross Validation F1 Scores:", crossVal)
 print("Mean cross validation F1 Score:", np.mean(crossVal))
 
 
-
-
-
 #Naive Bayes Setup
-
 nb = Pipeline(steps = [('preprocessor', preprocessor), ('nb', GaussianNB())])
 # fit
 nb.fit(X_train, y_train)
@@ -373,8 +362,6 @@ print("Mean cross validation F1 Score:", np.mean(crossVal))
 
 
 #KNN Setup
-
-
 knn = Pipeline(steps = [('preprocessor', preprocessor), ('knn', KNeighborsClassifier())])
 
 # fit model
@@ -401,7 +388,6 @@ print("Mean cross validation F1 Score:", np.mean(crossVal))
 
 
 #Random Forest Classifier
-
 rf = Pipeline(steps= [('preprocessor', preprocessor), ('rf', RandomForestClassifier(n_estimators=100, random_state=100))])
 
 rf.fit(X_train, y_train)
