@@ -194,11 +194,6 @@ plt.show()
 
 
 
-
-
-
-
-
 #FEATURE ENGINEERING
 
 #Create features to separate variables in quarters (Example)
